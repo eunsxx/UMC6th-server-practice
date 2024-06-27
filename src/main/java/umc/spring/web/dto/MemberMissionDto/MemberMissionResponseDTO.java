@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 public class MemberMissionResponseDTO {
     @Getter
     @NoArgsConstructor
@@ -15,5 +17,18 @@ public class MemberMissionResponseDTO {
         private Long memberId;
         private Long missionId;
         private String missionStatus;
+    }
+
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class MemberMissionListDto {
+        private Boolean isLast;
+        private Boolean isFirst;
+        private Integer totalPage;
+        private Long totalElements;
+        private Integer listSize;
+        private List<MemberMissionResultDto> missionList;
     }
 }
