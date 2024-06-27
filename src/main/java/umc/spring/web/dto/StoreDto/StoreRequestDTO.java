@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public class StoreRequestDTO {
     @Getter
     @NoArgsConstructor
@@ -15,4 +18,6 @@ public class StoreRequestDTO {
         private String address;
         private Float score;
     }
+
+
 }
