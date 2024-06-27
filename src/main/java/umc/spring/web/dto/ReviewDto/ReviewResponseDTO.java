@@ -15,6 +15,7 @@ public class ReviewResponseDTO {
     @AllArgsConstructor
     public static class ReviewResultDTO {
         private Long reviewId;
+        private String title;
         private String body;
         private Float score;
         private LocalDateTime createdAt;

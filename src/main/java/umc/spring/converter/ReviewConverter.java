@@ -12,6 +12,7 @@ public class ReviewConverter {
     public static ReviewResponseDTO.ReviewResultDTO toReviewResultDTO(Review review){
         return ReviewResponseDTO.ReviewResultDTO.builder()
                 .reviewId(review.getId())
+                .title(review.getTitle())
                 .body(review.getBody())
                 .score(review.getScore())
                 .createdAt(LocalDateTime.now())
@@ -21,6 +22,7 @@ public class ReviewConverter {
     public static Review toReview(ReviewRequestDTO.CreateDto request, Member member, Store store) {
 
         return Review.builder()
+                .title(request.getTitle())
                 .body(request.getBody())
                 .score(request.getScore())
                 .member(member)
