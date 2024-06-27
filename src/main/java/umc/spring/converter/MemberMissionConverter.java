@@ -6,6 +6,7 @@ import umc.spring.domain.Mission;
 import umc.spring.domain.enums.MissionStatus;
 import umc.spring.domain.mapping.MemberMission;
 import umc.spring.web.dto.MemberMissionDto.MemberMissionResponseDTO;
+import umc.spring.web.dto.MissionDto.MissionStatusUpdateResponseDTO;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -40,6 +41,13 @@ public class MemberMissionConverter {
                 .totalElements(memberMissionPage.getTotalElements())
                 .listSize(memberMissionResultDtoList.size())
                 .missionList(memberMissionResultDtoList)
+                .build();
+    }
+
+    public static MissionStatusUpdateResponseDTO.Response toMissionStatusUpdateResponse(MemberMission memberMission) {
+        return MissionStatusUpdateResponseDTO.Response.builder()
+                .memberMissionId(memberMission.getId())
+                .missionStatus(memberMission.getMissionStatus().name())
                 .build();
     }
 }
