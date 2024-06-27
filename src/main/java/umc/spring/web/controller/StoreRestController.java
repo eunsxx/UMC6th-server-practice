@@ -10,8 +10,8 @@ import umc.spring.apiPayload.ApiResponse;
 import umc.spring.converter.StoreConverter;
 import umc.spring.domain.Store;
 import umc.spring.service.StoreService.StoreCommandService;
-import umc.spring.web.dto.StoreRequestDTO;
-import umc.spring.web.dto.StoreResponseDTO;
+import umc.spring.web.dto.StoreDto.StoreRequestDTO;
+import umc.spring.web.dto.StoreDto.StoreResponseDTO;
 
 @RestController
 @RequiredArgsConstructor

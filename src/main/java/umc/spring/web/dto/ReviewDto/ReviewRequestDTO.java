@@ -1,4 +1,4 @@
-package umc.spring.web.dto;
+package umc.spring.web.dto.ReviewDto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
