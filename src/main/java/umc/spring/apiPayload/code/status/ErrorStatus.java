@@ -20,8 +20,8 @@ public enum ErrorStatus implements BaseErrorCode {
 
     MEMBER_NOT_FOUND(HttpStatus.BAD_REQUEST, "MEMBER4001", "사용자가 없습니다."),
     NICKNAME_NOT_EXIST(HttpStatus.BAD_REQUEST, "MEMBER4002", "닉네임은 필수 입니다."),
-    TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "테스트입니다.")
-    ;
+    TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "테스트입니다."),
+    UNAUTHORIZED_ACCESS(HttpStatus.UNAUTHORIZED, "MEMBER4003", "잘못된 계정입니다.");
 
 
     @Getter
