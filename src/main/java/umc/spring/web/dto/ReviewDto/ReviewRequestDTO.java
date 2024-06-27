@@ -15,6 +15,7 @@ public class ReviewRequestDTO {
     @AllArgsConstructor
     @Builder
     public static class CreateDto {
+        private String title;
         private String body;
         private Float score;
         private Long memberId;
